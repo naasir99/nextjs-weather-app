@@ -24,6 +24,7 @@ export default function Home() {
     })
     setCity('')
     setLoading(false)
+    document.getElementById('cityName').value=''
   }
 
   if (loading) {
@@ -52,7 +53,7 @@ export default function Home() {
         <div>
           <input 
             onChange={(e)=> setCity(e.target.value)}
-            className='bg-transparent border-none text-white focus:outline-none text-2xl' type="text" placeholder='Search city' />
+            className='bg-transparent border-none text-white focus:outline-none text-2xl' type="text" placeholder='Search city' id='cityName'/>
         </div>
         <button onClick={fetchWeather}> 
           <BsSearch size={40}/>
